@@ -1,8 +1,10 @@
 function check(){
 
 1 // Inputing the text
+     var textw = [];
+ textw = document.getElementById('textbox1').value;
     var text = [];
- text = document.getElementById('textbox1').value;
+    text = String(textw);
 console.log("text is  " +text);
     
     
@@ -10,10 +12,25 @@ console.log("text is  " +text);
 
 
 2 ///Converting text into binary format
-var binarytext= [];
+var binarytext1= [];
+    var binarytext= [];
+    var wer = []
 var i;
 for (i = 0; i < text.length; i++) {
-    binarytext[i] =  '0' + text[i].charCodeAt().toString(2);     
+
+    binarytext1[i] =  text[i].charCodeAt();
+    console.log(binarytext1[i]);
+    if(binarytext1[i]<64)
+        {
+    binarytext[i] = '00' + binarytext1[i].toString(2);
+            console.log("00");
+        }
+    else
+        {
+             binarytext[i] = '0' + binarytext1[i].toString(2);
+            console.log("0");
+        }
+    //
 }
 console.log("binarytext is " +binarytext);
 
