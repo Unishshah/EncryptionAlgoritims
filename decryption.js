@@ -1,7 +1,7 @@
 function check(){
 
 1 // Inputing the text
-     var textw = [];
+    var textw = [];
  textw = document.getElementById('textbox1').value;
     var text = [];
     text = String(textw);
@@ -55,8 +55,13 @@ console.log("chrtext is  "+chrtext);
 
 
 4//Inputing the key
- var keyxx1 = [];
- keyxx1 = document.getElementById('textbox2').value;
+ var keyxx12 = [];
+ keyxx12 = document.getElementById('textbox2').value;
+    
+    var keyxx1 = [];
+    keyxx1 = String(keyxx12);
+
+    
     var keyxx = [];
     for( i=0;i<keyxx1.length;i++){
      keyxx[i] =  keyxx1[i];
@@ -85,11 +90,24 @@ else
 console.log("key1 is  " +key);
 
 2 ///Converting text into binary format
-var binarykey= [];
+var binarykey1= [];
+    var binarykey= [];
 
 
 for (i = 0; i < key.length; i++) {
-    binarykey[i] =  '0' + key[i].charCodeAt().toString(2);
+    binarykey1[i] =  key[i].charCodeAt();
+   
+    console.log(binarykey1[i]);
+    if(binarykey1[i]<64)
+        {
+    binarykey[i] = '00' + binarykey1[i].toString(2);
+            console.log("00");
+        }
+    else
+        {
+             binarykey[i] = '0' + binarykey1[i].toString(2);
+            console.log("0");
+        }
 }
 console.log("binarykey is " +binarykey);
 
@@ -284,9 +302,15 @@ var ch111 = binnum[i].split('');
 }
 console.log("chrtext is  " +decchrtext);
 
+    //entering the key for decryption
     
-var keyxx1 = [];
- keyxx1 = document.getElementById('textbox4').value;
+    var keyxx12 = [];
+ keyxx12 = document.getElementById('textbox4').value;
+    
+    var keyxx1 = [];
+    keyxx1 = String(keyxx12);
+
+    
     var keyxx = [];
     for( i=0;i<keyxx1.length;i++){
      keyxx[i] =  keyxx1[i];
@@ -317,10 +341,25 @@ console.log("text is  " +key);
 
 2 ///Converting text into binary format
 
-var binarykey = [];
+
+    var binarykey1= [];
+    var binarykey= [];
+
 
 for (i = 0; i < key.length; i++) {
-    binarykey[i] =  '0' + key[i].charCodeAt().toString(2);
+    binarykey1[i] =  key[i].charCodeAt();
+   
+    console.log(binarykey1[i]);
+    if(binarykey1[i]<64)
+        {
+    binarykey[i] = '00' + binarykey1[i].toString(2);
+            console.log("00");
+        }
+    else
+        {
+             binarykey[i] = '0' + binarykey1[i].toString(2);
+            console.log("0");
+        }
 }
 console.log("binarykey is " +binarykey);
 
@@ -374,8 +413,12 @@ console.log("second key is " +secondkeyvalue);
     }
 console.log("total is " +firsttotal1);
 
+    var keyxx12 = [];
+ keyxx12 = document.getElementById('textbox4').value;
+    
     var keyxx1 = [];
- keyxx1 = document.getElementById('textbox4').value;
+    keyxx1 = String(keyxx12);
+    
     var keyxx = [];
     for( i=0;i<keyxx1.length;i++){
      keyxx[i] =  keyxx1[i];
@@ -404,12 +447,26 @@ else
 console.log("text is  " +key);
 2 ///Converting text into binary format
 
-var binarykey = [];
+      
+
 
 for (i = 0; i < key.length; i++) {
-    binarykey[i] =  '0' + key[i].charCodeAt().toString(2);
+    binarykey1[i] =  key[i].charCodeAt();
+   
+    console.log(binarykey1[i]);
+    if(binarykey1[i]<64)
+        {
+    binarykey[i] = '00' + binarykey1[i].toString(2);
+            console.log("00");
+        }
+    else
+        {
+             binarykey[i] = '0' + binarykey1[i].toString(2);
+            console.log("0");
+        }
 }
 console.log("binarykey is " +binarykey);
+
 
 
 var chr = [];
